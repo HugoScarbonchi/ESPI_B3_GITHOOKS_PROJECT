@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# get the path to this script file
+DIR=$(dirname "$0")
+
+# Java >= 11
+exec java $DIR/Push.java "$@"
