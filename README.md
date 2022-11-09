@@ -26,3 +26,10 @@
 - id
 
 ### Employee
+
+# Hooks
+
+## Push
+- Savoir dans quel branche on pousse
+## Commit 
+- Ajouter date, heure et émoji
