@@ -7,7 +7,6 @@ public class Push {
         
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Validez-vous l'opération ?(y/n)");
-
         String answer = myObj.nextLine();  // Read user input
 
         System.out.println("Votre réponse : " + answer);
