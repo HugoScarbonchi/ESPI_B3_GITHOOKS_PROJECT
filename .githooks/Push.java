@@ -3,19 +3,20 @@ import java.util.Scanner;
 
 public class Push {
     public static void main(String[] args) throws IOException{
-        System.out.println("Vous allez push sur la branche " + args[1]);
         
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Validez-vous l'opération ?(y/n)");
-        String answer = myObj.nextLine();  // Read user input
+        String[] remoteBranchRefs = args[0].split("/");
+		String remoteBranchName = remoteBranchRefs[remoteBranchRefs.length - 1];
 
-        System.out.println("Votre réponse : " + answer);
+		System.out.println("Vous vouz appretez à pousser sur la branche " + remoteBranchName);
 
-        if(answer == "yes" || answer == "y" || answer == ""){
-            System.out.println("Push réussi");
-            System.exit(1);
-        } else {
-            System.exit(1);
-        }
+		
+		if (remoteBranchName.equals("main") || remoteBranchName.equals("master")) {
+			System.out.println("Évitez de push sur la branche principale, ce n'est pas une bonne pratique !");
+			System.exit(1);
+		}
+		else {
+			System.out.println("Vous venez de push sur la branche " + remoteBranchName);
+			System.exit(0);
+		}
     }
 }
