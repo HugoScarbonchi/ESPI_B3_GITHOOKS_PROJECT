@@ -8,4 +8,4 @@ do
     remote_branch=$remote_ref
 done
 # Java >= 11
-exec java $DIR/Hook_Push.java $remote_branch
+exec java $DIR/Push.java $remote_branch
