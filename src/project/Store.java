@@ -17,12 +17,12 @@ public class Store {
 	}
     
     public void openTheStore() {
-		isOpen = true;
+		this.isOpen = true;
 		System.out.println("Bienvenue dans votre store préféré !");
 	}
     
     public void closeTheStore() {
-		nbWorkers = 0;
+    	this.nbWorkers = 0;
 		isOpen = false;
 	}
     
@@ -37,7 +37,7 @@ public class Store {
 	}
     
     public void workerComeToWork(String nameWorker) {
-		nbWorkers++;
+    	this.nbWorkers++;
 		System.out.println("Bienvenue au travail " + nameWorker + " !");
 	}
     
