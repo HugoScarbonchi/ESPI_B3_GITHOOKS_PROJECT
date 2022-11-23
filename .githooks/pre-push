@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# get the path to this script file
+DIR=$(dirname "$0")
+
+while read remote_ref
+do 
+    remote_branch=$remote_ref
+done
+# Java >= 11
+exec java $DIR/Push.java $remote_branch
