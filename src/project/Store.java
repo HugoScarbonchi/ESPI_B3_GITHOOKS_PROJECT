@@ -1,3 +1,5 @@
+package project;
+
 public class Store {
     
     String name;
@@ -39,6 +41,48 @@ public class Store {
     public void workerComeToWork(String nameWorker) {
     	this.nbWorkers++;
 		System.out.println("Bienvenue au travail " + nameWorker + " !");
+	}
+    
+    public String getName() {
+		return name;
+	}
+    public void setName(String name) {
+		this.name = name;
+	}
+    
+    public String getAddress() {
+		return address;
+	}
+    public void setAddress(String address) {
+		this.address = address;
+	}
+    
+    public int getNbEmployees() {
+		return nbEmployees;
+	}
+    public void setNbEmployees(int nbEmployees) {
+		this.nbEmployees = nbEmployees;
+	}
+    
+    public int getNbMaximumEmployees() {
+		return nbMaximumEmployees;
+	}
+    public void setNbMaximumEmployees(int nbMaximumEmployees) {
+		this.nbMaximumEmployees = nbMaximumEmployees;
+	}
+    
+    public int getNbWorkers() {
+		return nbWorkers;
+	}
+    public void setNbWorkers(int nbWorkers) {
+		this.nbWorkers = nbWorkers;
+	}
+    
+    public boolean getIsOpen() {
+		return isOpen;
+	}
+    public void setIsOpen(boolean isOpen) {
+		this.isOpen = isOpen;
 	}
     
 

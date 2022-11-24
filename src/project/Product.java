@@ -1,3 +1,5 @@
+package project;
+
 public class Product {
 
     String name;
@@ -32,15 +34,32 @@ public class Product {
     }
     
     public void ajouterPromotion(float pourcentage) {
-    
-        this.price = this.price - this.price * pourcentage;
+    	
+        this.price = (long) (this.price - this.price * pourcentage);
     
     }
     
+    
+    
+    public String getName() {
+		return name;
+	}
+    public void setName(String name) {
+		this.name = name;
+	}
+    
+    public Collection getCollection() {
+		return collection;
+	}
     public void setCollection(Collection collection) {
-    
         this.collection = collection;
-    
     }
+    
+    public long getPrice() {
+		return price;
+	}
+    public void setPrice(long price) {
+		this.price = price;
+	}
     
 }
