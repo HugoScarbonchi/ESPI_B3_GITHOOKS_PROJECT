@@ -9,7 +9,6 @@ public class Store {
     int nbMaximumEmployees;
     boolean isOpen;
     
-	//test
     public Store(String name, String address, int nbEmployees, int nbMaximumEmployees, boolean isOpen) {
     	this.name = name;
     	this.address = address;
