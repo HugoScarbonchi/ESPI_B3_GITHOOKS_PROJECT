@@ -15,8 +15,7 @@ public class Commit {
         LocalDateTime now = LocalDateTime.now();
         currentDate = dtf.format(now);
 
-        Systeme.out.println(currentDate);
-
+        System.out.println(currentDate);
 
         System.exit(1);
     }
