@@ -16,7 +16,7 @@ public class Push {
 		}
 		else { 
 			System.out.println("Vous venez de push sur la branche " + remoteBranchName);
-			System.exit(1);
+			System.exit(0);
 		}
     }
 }
