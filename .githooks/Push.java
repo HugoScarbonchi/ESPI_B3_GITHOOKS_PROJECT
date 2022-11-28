@@ -14,7 +14,7 @@ public class Push {
 			System.out.println("Évitez de push sur la branche principale, ce n'est pas une bonne pratique !");
 			System.exit(1);
 		}
-		else {
+		else { 
 			System.out.println("Vous venez de push sur la branche " + remoteBranchName);
 			System.exit(1);
 		}
