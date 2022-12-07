@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Push {
     public static void main(String[] args) throws IOException{
 
-		System.out.println("Bonjour !");
 		String branch = args[0];
 		ArrayList<String> protectedBranches = new ArrayList<>();
 		protectedBranches.add("main");
 		protectedBranches.add("master");
+		protectedBranches.add("dev")
 		
         // String[] remoteBranchRefs = args[0].split("/");
 		// String remoteBranchName = remoteBranchRefs[remoteBranchRefs.length - 1];

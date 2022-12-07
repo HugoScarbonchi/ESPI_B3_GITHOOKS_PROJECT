@@ -12,4 +12,4 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 PROTECTED_BRANCHES="^(master|main|release-*|patch-*)"
 
 # Java >= 11
-exec java $DIR/Push.java $BRANCH $PROTECTED_BRANCHES
+exec java $DIR/Push.java $BRANCH
