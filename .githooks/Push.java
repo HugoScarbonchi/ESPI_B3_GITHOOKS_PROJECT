@@ -9,7 +9,7 @@ public class Push {
 		ArrayList<String> protectedBranches = new ArrayList<>();
 		protectedBranches.add("main");
 		protectedBranches.add("master");
-		protectedBranches.add("dev")
+		protectedBranches.add("dev");
 		
         // String[] remoteBranchRefs = args[0].split("/");
 		// String remoteBranchName = remoteBranchRefs[remoteBranchRefs.length - 1];
