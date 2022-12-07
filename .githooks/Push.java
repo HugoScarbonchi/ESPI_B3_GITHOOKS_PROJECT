@@ -20,7 +20,7 @@ public class Push {
 			System.exit(1);
 		} else {
 			System.out.println("Vous venez de push sur la branche " + remoteBranchName);
-			System.exit(0);
+			System.exit(1);
 		}
 		
 		// if (remoteBranchName.equals("main") || remoteBranchName.equals("master")) {
