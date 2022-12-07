@@ -20,7 +20,7 @@ public class Store {
     
     public void openTheStore() {
 		this.isOpen = true;
-		System.out.println("Bienvenue dans votre store pr�f�r� !");
+		System.out.println("Bienvenue dans votre store préféré !");
 	}
     
     public void closeTheStore() {
