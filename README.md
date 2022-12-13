@@ -8,7 +8,7 @@ Les personnes ayant travaillé sur ce projet sont :
 
 ### Présentation du projet
 
->Notre projet java reprend le fonctionnement d'un store comme ceux d'Apple.  🧑‍💻 Il est composé de classes avec des champs et et méthodes très simple qui pourraient représenter le fonctionnement d'un Apple Store.
+>Notre projet java reprend le fonctionnement d'un store comme ceux d'Apple.  🧑‍💻  Il est composé de classes avec des champs et et méthodes très simple qui pourraient représenter le fonctionnement d'un Apple Store.
 
 ***Parmis les classes nous avons :***
 - Product
