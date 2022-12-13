@@ -2,7 +2,7 @@
 ## 🔎 [Sujet de l'évaluation](https://docs.google.com/document/d/14JCQic_200O7LIuUEa7Cjutao78dINbZKudZx8auF-4/edit)
 
 Les personnes ayant travaillé sur ce projet sont :
-- Maxime BAUDOUIN
+- Maxime BAUDOIN
 - Hugo SCARBONCHI
 - Antonin SIMON
 
