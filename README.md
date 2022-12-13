@@ -14,7 +14,7 @@ Les personnes ayant travaillé sur ce projet sont :
 - Product
 - Store
 
-Grâce à [JUnit](https://junit.org/junit5/) nous avons aussi mis en place des testes unitaires sur les classes : 
+Grâce à [JUnit](https://junit.org/junit5/) nous avons aussi mis en place des tests unitaires sur les classes : 
 - Product
 - Store
 
