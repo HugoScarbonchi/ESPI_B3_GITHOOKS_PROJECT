@@ -4,10 +4,12 @@
 
 timestamp=$(date)
 
+# Récupérer le nom du fichier qui contient le message de commit actuel
+commitMessageFile=$GIT_EDITOR
+echo $commitMessageFile
+
 # Récupérer le message de commit actuel
-commitMessage=$1
-echo $1
+commitMessage=$(cat $commitMessageFile)
 
 # Ajouter le timestamp au message de commit
 echo "$timestamp $commitMessage" > $commitMessageFile
-

@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# A git hook script to prepare the commit log message.
+#
+# It adds below date message to commits:
+# $yearnum/$weeknum/$daynum $unix_timestamp | version:
+#
+# To enable this hook, rename this file to "prepare-commit-msg".
+# Add it below '.git/hooks/' and make it executable:
+# chmod +x prepare-commit-msg
+
+
+
+COMMIT_MSG_FILE=$1
+
+if [ -z "$COMMIT_MSG_FILE" ]; then
+    echo "Pas de message de commit trouvé"
+    exit 1
+else
+    if [ ! -w "$COMMIT_MSG_FILE" ]; then
+        echo "Impossible d'écrire dans le fichier $COMMIT_MSG_FILE"
+        exit 1
+    else
+
+    date=$(date '+%Y-%m-%d %H:%M:%S')
+
+    MESSAGE="Ajouter le $date"
+
+    echo $MESSAGE
+    echo $COMMIT_MSG_FILE
+
+    sed -n "1s/^/$MESSAGE/" $COMMIT_MSG_FILE
+
+    fi
+
+    
+fi
+
+
+
+
