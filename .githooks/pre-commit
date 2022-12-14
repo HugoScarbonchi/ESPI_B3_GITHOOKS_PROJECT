@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Ajouter un timestamp au message de commit
+
+timestamp=$(date)
+
+# Récupérer le message de commit actuel
+commitMessage=$1
+echo $1
+
+# Ajouter le timestamp au message de commit
+echo "$timestamp $commitMessage" > $commitMessageFile
+
