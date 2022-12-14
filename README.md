@@ -9,7 +9,7 @@
 
 ### Product
 #### Attributes
-- nam
+- name
 - collection
 - price
 
