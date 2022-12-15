@@ -1,6 +1,14 @@
+#!/bin/sh
+
+#GET BRANCH NAME
 NAME=$(git branch | grep '*' | sed 's/* //')
+
+#GET TIMESTAMP
 TIMESTAMP=$(date +"%D %T")
+
+#GET BRANCH DESCRIPTION
 DESCRIPTION=$(git config branch."$NAME".description)
+
 echo "$TIMESTAMP — $NAME"': '$(cat "$1") > "$1"
 if [ -n "$DESCRIPTION" ]
 then
