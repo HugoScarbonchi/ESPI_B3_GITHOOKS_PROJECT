@@ -4,6 +4,7 @@
 Les personnes ayant travaillé sur ce projet sont :
 - Maxime BAUDOIN
 - Hugo SCARBONCHI
+- Thomas ALGLAVE
 - Antonin SIMON
 
 ### Présentation du projet
