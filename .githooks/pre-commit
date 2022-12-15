@@ -9,6 +9,8 @@ TIMESTAMP=$(date +"%D %T")
 #GET BRANCH DESCRIPTION
 DESCRIPTION=$(git config branch."$NAME".description)
 
+echo $1
+
 echo "$TIMESTAMP — $NAME"': '$(cat "$1") > "$1"
 if [ -n "$DESCRIPTION" ]
 then
