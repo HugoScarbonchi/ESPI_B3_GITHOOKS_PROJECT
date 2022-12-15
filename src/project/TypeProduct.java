@@ -1,7 +1,5 @@
 package project;
 
-import java.awt.ImageCapabilities;
-
 public enum TypeProduct {
 	MACBOOK("MacBook"),
 	IPHONE("iPhone"),
