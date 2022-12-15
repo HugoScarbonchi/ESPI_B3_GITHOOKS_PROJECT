@@ -3,27 +3,15 @@ package project;
 public class Product {
 
     String name;
+    TypeProduct typeProduct;
     Collection collection;
     long price;
-
-    public Product(String name) {
-
-        this.name = name;
     
-    }
-    
-    public Product(String name, long price) {
+    public Product(String name, long price, TypeProduct typeProduct) {
     
         this.name = name;
         this.price = price;
-    
-    }
-    
-    public Product(String name, long price, Collection collection) {
-    
-        this.name = name;
-        this.price = price;
-        this.collection = collection;
+        this.typeProduct = typeProduct;
     
     }
     
@@ -60,6 +48,12 @@ public class Product {
 	}
     public void setPrice(long price) {
 		this.price = price;
+	}
+    public TypeProduct getTypeProduct() {
+		return typeProduct;
+	}
+    public void setTypeProduct(TypeProduct typeProduct) {
+		this.typeProduct = typeProduct;
 	}
     
 }

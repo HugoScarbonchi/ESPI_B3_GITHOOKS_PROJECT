@@ -1,5 +1,7 @@
 package project;
 
+import java.util.ArrayList;
+
 public class Store {
     
     String name;
@@ -8,6 +10,7 @@ public class Store {
     int nbEmployees;
     int nbMaximumEmployees;
     boolean isOpen;
+    ArrayList<Product> productsAvailable;
     
     public Store(String name, String address, int nbEmployees, int nbMaximumEmployees, boolean isOpen) {
     	this.name = name;
@@ -16,17 +19,19 @@ public class Store {
     	this.nbEmployees = nbEmployees;
     	this.nbMaximumEmployees = nbMaximumEmployees;
     	this.isOpen = isOpen;
+    	productsAvailable = new ArrayList<Product>();
 	}
     
     public void openTheStore() {
 		this.isOpen = true;
-		System.out.println("Bienvenue dans votre store préféré !!!");
+		System.out.println("Bienvenue dans votre store préféré à " + address +  " !!!");
 	}
     
     public void closeTheStore() {
     	this.nbWorkers = 0;
 		isOpen = false;
 	}
+    
     
     public boolean canComeToWork() {
 		if(nbEmployees == nbMaximumEmployees) {
@@ -38,11 +43,44 @@ public class Store {
 		}
 	}
     
+    public void addAvailableProduct(Product product) {
+		productsAvailable.add(product);
+		System.out.println("[ New !  -  " + name + " ]    Le produit " + product.getName() + " est maintenant disponible à " + product.getPrice() + "€.");
+	}
+    
+    public boolean isAvailable(Product product) {
+    	for(Product productAvailable: productsAvailable) {
+    		if (product.getName() == productAvailable.getName() && product.getTypeProduct() == productAvailable.getTypeProduct()) {
+				return true;
+			}
+    	}
+    	return false;
+	}
+    
+    public void catalog() {
+		System.out.println();
+		System.out.println("~ ~ ~ PRODUITS DISPONIBLES DANS CE MAGASIN ~ ~ ~");
+		System.out.println();
+		for(Product product: productsAvailable) {
+			System.out.println(product.getName() + " : " + product.getPrice() + "€");
+		}
+		System.out.println();
+		System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+		System.out.println();
+	}
+    
     public void workerComeToWork(String nameWorker) {
     	this.nbWorkers++;
 		System.out.println("Bienvenue au travail " + nameWorker + " !");
 	}
     
+    public float catalogPrice() {
+    	float catalogPrice = 0;
+    	for(Product product: productsAvailable) {
+    		catalogPrice += product.getPrice();
+    	}
+		return catalogPrice;
+	}
     public String getName() {
 		return name;
 	}
@@ -84,6 +122,8 @@ public class Store {
     public void setIsOpen(boolean isOpen) {
 		this.isOpen = isOpen;
 	}
-    
-
+    public ArrayList<Product> getProductsAvailable() {
+		return productsAvailable;
+	}
+	
 }

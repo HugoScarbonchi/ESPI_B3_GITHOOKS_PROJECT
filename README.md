@@ -10,9 +10,13 @@ Les personnes ayant travaillé sur ce projet sont :
 
 >Notre projet java reprend le fonctionnement d'un store comme ceux d'Apple.  🧑‍💻  Il est composé de classes avec des champs et méthodes très simple qui pourraient représenter le fonctionnement d'un Apple Store.
 
-***Parmis les classes nous avons :***
+***Parmis les Classes/Enum nous avons :***
 - Product
+- TypeProduct (Enum)
 - Store
+- Person
+- Employee qui hérite de **Person**
+- Customer qui hérite de **Person**
 
 Grâce à [JUnit](https://junit.org/junit5/) nous avons aussi mis en place des tests unitaires sur les classes : 
 - Product
