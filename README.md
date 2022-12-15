@@ -33,7 +33,7 @@ Concernant les hooks, ces derniers sont des scripts exécutés automatiquement p
 Il est possible que ces derniers ne soient pas récupérés avec les droits d'exécutions.
 *Pensez à passer la commande suivante :*
 ```sh
-chmod +x commit-msg pre-push
+chmod +x .githooks/commit-msg .githooks/pre-push
 ```
 
 ## Merci pour votre visite et à bientôt ! 👋
