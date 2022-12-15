@@ -9,7 +9,7 @@ TIMESTAMP=$(date +"%D %T")
 #GET BRANCH DESCRIPTION
 DESCRIPTION=$(git config branch."$NAME".description)
 
-
+#EDIT NEW COMMIT MESSAGE WITH BRANCH NAME AND TIMESTAMP
 echo "$TIMESTAMP — $NAME"': '$(cat "$1") > "$1"
 
 if [ -n "$DESCRIPTION" ]
