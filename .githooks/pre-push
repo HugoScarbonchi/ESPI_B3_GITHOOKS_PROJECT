@@ -7,5 +7,9 @@ while read remote_ref
 do 
     remote_branch=$remote_ref
 done
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(master|main|release-*|patch-*)"
+
 # Java >= 11
-exec java $DIR/Push.java $remote_branch
+exec java $DIR/Push.java $BRANCH

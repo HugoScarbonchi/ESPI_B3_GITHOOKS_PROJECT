@@ -1,36 +1,40 @@
-# ESPI_B3_GITHOOKS_PROJECT
+# Java - Amélioration Continue
+## 🔎 [Sujet de l'évaluation](https://docs.google.com/document/d/14JCQic_200O7LIuUEa7Cjutao78dINbZKudZx8auF-4/edit)
 
-## Classes
-### Store
-#### Attributes
-- name
-- address
-- nbMaximumEmployees
+Les personnes ayant travaillé sur ce projet sont :
+- Maxime BAUDOIN
+- Hugo SCARBONCHI
+- Thomas ALGLAVE
+- Antonin SIMON
 
-### Product
-#### Attributes
-- name
-- collection
-- price
+### Présentation du projet
 
-### Collection
-#### Attributes
-- name
+>Notre projet java reprend le fonctionnement d'un store comme ceux d'Apple.  🧑‍💻  Il est composé de classes avec des champs et méthodes très simple qui pourraient représenter le fonctionnement d'un Apple Store.
 
-### Personn
-#### Attributes
-- firstname
-- lastname
+***Parmis les Classes/Enum nous avons :***
+- Product
+- TypeProduct (Enum)
+- Store
+- Person
+- Employee qui hérite de **Person**
+- Customer qui hérite de **Person**
 
-### Client
-- id
+Grâce à [JUnit](https://junit.org/junit5/) nous avons aussi mis en place des tests unitaires sur les classes : 
+- Product
+- Store
 
-### Employee
+Enfin, nous avons partagé deux Git Hooks pour assurer des bonnes pratiques et améliorer la qualité de son travail via Git :
 
-# Hooks
+| Git Hooks | Description |
+| ------ | ------ |
+| commit-msg | Ajout de la date, de l'heure et d'un smiley à la suite du message |
+| pre-push | Vérifie la branche en cours et bloque si cette dernière est la main |
 
-## Push
-Hook de pre-push qui va vérifier la branche sur laquelle on push. La branche concernée est récupérée dans notre **script pre-push** et le tratiement est fait dans un fichier **Java**.
-L'idée de ce hook est de **respecter les bonnes pratiques de Git**. Notre Hook va **bloquer automatiquement le push si la branche de destination est la main** (ici c'est notre branche qui sert de prod).
-## Commit 
-- Ajouter date, heure et émoji
+Concernant les hooks, ces derniers sont des scripts exécutés automatiquement par Git après le passage des commandes.
+Il est possible que ces derniers ne soient pas récupérés avec les droits d'exécutions.
+*Pensez à passer la commande suivante :*
+```sh
+chmod +x .githooks/commit-msg .githooks/pre-push
+```
+
+## Merci pour votre visite et à bientôt ! 👋
