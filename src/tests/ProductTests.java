@@ -20,12 +20,13 @@ public class ProductTests {
 		
 	}
 	
+	@Test
 	public void applyPromotion() {
 
 		Product product2 = new Product("MacBook Pro", 2000000, TypeProduct.MACBOOK);
 		product2.ajouterPromotion(10);
 		Product product3 = new Product("iMac", 5000000, TypeProduct.IMAC);
-		product3.ajouterPromotion(40);
+		product3.ajouterPromotion(40.0f);
 		
 		assertEquals(product2.getPrice(), 1999990);
 		assertEquals(product3.getPrice(), 3000000);

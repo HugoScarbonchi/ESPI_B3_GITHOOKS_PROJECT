@@ -6,7 +6,6 @@ public class Store {
     
     String name;
     String address;
-    int nbWorkers;
     int nbEmployees;
     int nbMaximumEmployees;
     boolean isOpen;
@@ -15,7 +14,6 @@ public class Store {
     public Store(String name, String address, int nbEmployees, int nbMaximumEmployees, boolean isOpen) {
     	this.name = name;
     	this.address = address;
-    	this.nbWorkers = 0;
     	this.nbEmployees = nbEmployees;
     	this.nbMaximumEmployees = nbMaximumEmployees;
     	this.isOpen = isOpen;
@@ -28,7 +26,7 @@ public class Store {
 	}
     
     public void closeTheStore() {
-    	this.nbWorkers = 0;
+    	this.nbEmployees = 0;
 		isOpen = false;
 	}
     
@@ -69,9 +67,9 @@ public class Store {
 		System.out.println();
 	}
     
-    public void workerComeToWork(String nameWorker) {
-    	this.nbWorkers++;
-		System.out.println("Bienvenue au travail " + nameWorker + " !");
+    public void employeeComeToWork(String nameEmployee) {
+    	this.nbEmployees++;
+		System.out.println("Bienvenue au travail " + nameEmployee + " !");
 	}
     
     public float catalogPrice() {
@@ -107,13 +105,6 @@ public class Store {
 	}
     public void setNbMaximumEmployees(int nbMaximumEmployees) {
 		this.nbMaximumEmployees = nbMaximumEmployees;
-	}
-    
-    public int getNbWorkers() {
-		return nbWorkers;
-	}
-    public void setNbWorkers(int nbWorkers) {
-		this.nbWorkers = nbWorkers;
 	}
     
     public boolean getIsOpen() {

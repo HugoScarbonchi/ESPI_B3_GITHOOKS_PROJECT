@@ -16,7 +16,6 @@ public class StoreTests {
 		assertEquals(store1.getAddress(), "2-4 Rue Sainte-Catherine, 33000 Bordeaux");
 		assertEquals(store1.getNbEmployees(), 100);
 		assertEquals(store1.getNbMaximumEmployees(), 150);
-		assertEquals(store1.getNbWorkers(), 0);
 		assertEquals(store1.getIsOpen(), true);
 		
 	}
@@ -24,7 +23,7 @@ public class StoreTests {
 	@Test
 	public void openTheStore() {
 		Store store1 = new Store("Apple Store Bordeaux", "2-4 Rue Sainte-Catherine, 33000 Bordeaux", 100, 150, true);
-		Store store2 = new Store("Apple Champs-Élysées", "114 Av. des Champs-Élysées, 75008 Paris", 250, 300, false);
+		Store store2 = new Store("Apple Champs-ï¿½lysï¿½es", "114 Av. des Champs-ï¿½lysï¿½es, 75008 Paris", 250, 300, false);
 		
 		store1.openTheStore();
 		store2.openTheStore();
@@ -36,36 +35,34 @@ public class StoreTests {
 	@Test
 	public void closeTheStore() {
 		Store store1 = new Store("Apple Store Bordeaux", "2-4 Rue Sainte-Catherine, 33000 Bordeaux", 100, 150, true);
-		Store store2 = new Store("Apple Champs-Élysées", "114 Av. des Champs-Élysées, 75008 Paris", 250, 300, false);
+		Store store2 = new Store("Apple Champs-ï¿½lysï¿½es", "114 Av. des Champs-ï¿½lysï¿½es, 75008 Paris", 250, 300, false);
 		
-		store1.setNbWorkers(100);
-		store2.setNbWorkers(200);
 		
 		store1.closeTheStore();
 		store2.closeTheStore();
 		
 		assertEquals(store1.getIsOpen(), false);
 		assertEquals(store2.getIsOpen(), false);
-		assertEquals(store1.getNbWorkers(), 0);
-		assertEquals(store2.getNbWorkers(), 0);
+		assertEquals(store1.getNbEmployees(), 0);
+		assertEquals(store2.getNbEmployees(), 0);
 	}
 	
 	@Test
 	public void canComeToWork() {
 		
 		Store store1 = new Store("Apple Store Bordeaux", "2-4 Rue Sainte-Catherine, 33000 Bordeaux", 150, 150, true);
-		Store store2 = new Store("Apple Champs-Élysées", "114 Av. des Champs-Élysées, 75008 Paris", 250, 300, false);
+		Store store2 = new Store("Apple Champs-ï¿½lysï¿½es", "114 Av. des Champs-ï¿½lysï¿½es, 75008 Paris", 250, 300, false);
 		
 		assertEquals(store1.canComeToWork(), false);
 		assertEquals(store2.canComeToWork(), true);
 	}
     
-    public void workerComeToWork(String nameWorker) {
-    	Store store1 = new Store("Apple Store Bordeaux", "2-4 Rue Sainte-Catherine, 33000 Bordeaux", 150, 150, true);
+	@Test
+    public void employeeComeToWork() {
+    	Store store1 = new Store("Apple Store Bordeaux", "2-4 Rue Sainte-Catherine, 33000 Bordeaux", 120, 150, true);
     	
-    	store1.setNbWorkers(120);
-    	store1.workerComeToWork(nameWorker);
+    	store1.employeeComeToWork("Emma");
 
-		assertEquals(store1.getNbWorkers(), 121);
+		assertEquals(store1.getNbEmployees(), 121);
 	}
 }

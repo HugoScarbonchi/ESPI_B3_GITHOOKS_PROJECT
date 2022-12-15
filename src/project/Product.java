@@ -22,8 +22,7 @@ public class Product {
     }
     
     public void ajouterPromotion(float pourcentage) {
-    	
-        this.price = (long) (this.price - this.price * pourcentage);
+        this.price = (long) (this.price - this.price * (pourcentage/100));
     
     }
     
