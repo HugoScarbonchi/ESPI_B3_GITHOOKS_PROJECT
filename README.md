@@ -27,7 +27,7 @@ Enfin, nous avons partagé deux Git Hooks pour assurer des bonnes pratiques et a
 
 | Git Hooks | Description |
 | ------ | ------ |
-| commit-msg | Ajout de la date, de l'heure et d'un smiley à la suite du message |
+| pre-commit | Ajout de la date, de l'heure au message du commit |
 | pre-push | Vérifie la branche en cours et bloque si cette dernière est la main |
 
 Concernant les hooks, ces derniers sont des scripts exécutés automatiquement par Git après le passage des commandes.
